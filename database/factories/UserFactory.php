@@ -24,6 +24,7 @@ class UserFactory extends Factory
             'phone_number' => fake()->unique()->numerify('08##########'),
             'address'      => fake()->address(),
             'pin'          => Hash::make('123456'),
+            'balance'      => 0,
         ];
     }
 }

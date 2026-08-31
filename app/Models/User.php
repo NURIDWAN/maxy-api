@@ -11,7 +11,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
-#[Fillable(['first_name', 'last_name', 'phone_number', 'address', 'pin'])]
+#[Fillable(['first_name', 'last_name', 'phone_number', 'address', 'pin', 'balance'])]
 #[Hidden(['pin'])]
 class User extends Authenticatable implements JWTSubject
 {
