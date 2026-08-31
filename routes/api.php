@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\PaymentController;
+use App\Http\Controllers\Api\ProfileController;
 use App\Http\Controllers\Api\TopUpController;
 use App\Http\Controllers\Api\TransactionDetailController;
 use App\Http\Controllers\Api\TransferController;
@@ -16,4 +17,5 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/topup', [TopUpController::class, 'topUp']);
     Route::post('/pay', [PaymentController::class, 'pay']);
     Route::get('/transactions/{id}', [TransactionDetailController::class, 'show']);
+    Route::put('/profile', [ProfileController::class, 'update']);
 });
